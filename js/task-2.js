@@ -27,3 +27,7 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+for (const el of images) { 
+  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}" ></li>`); 
+};
