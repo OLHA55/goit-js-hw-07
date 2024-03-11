@@ -27,7 +27,10 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
-
+const removed = images.splice(3);
 for (const el of images) { 
-  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}" ></li>`); 
+  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}" width= "2250 "></li>`); 
 };
+
+
+

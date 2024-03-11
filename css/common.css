@@ -11,3 +11,9 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+.images {
+  display: block;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 2250 px;
+}
