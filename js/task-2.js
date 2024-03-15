@@ -29,20 +29,6 @@ const images = [
 ];
 
 
-images.every(function(item, i) {
-  if (item == "1") {
-    console.log(i);
-    return false;
-  } else {
-    return true;
-  }
-});
- document.getElementsByName("result").innerHTML += [];
 for (const el of images) { 
   document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}"></li>`); 
-} 
-
-
-
-
-
+}
