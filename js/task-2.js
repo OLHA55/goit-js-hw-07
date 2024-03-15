@@ -29,6 +29,9 @@ const images = [
 ];
 
 
-for (const el of images) { 
-  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}"></li>`); 
+const image = document.guerySelector(`.gallery`);
+
+for (let element of images) {
+    element.value = 3;
+    document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${element.url}" alt="${element.alt}"></li>`);
 }
