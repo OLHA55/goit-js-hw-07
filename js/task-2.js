@@ -28,10 +28,27 @@ const images = [
   },
 ];
 
+	
 
-const image = document.guerySelector(`.gallery`);
+  const element = document.querySelector('.gallery');
+const img = images
+.map(({ url, alt }) => {
+  return `
+  <ul>
+    <li>${url}</li>
+    <li>${alt}</li>
+  </ul >
+    `
+})
 
-for (let element of images) {
-    element.value = 3;
-    document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${element.url}" alt="${element.alt}"></li>`);
+for (const el of images) {
+  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}"></li>`);
 }
+   
+
+
+  
+
+
+
+
