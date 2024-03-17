@@ -28,27 +28,7 @@ const images = [
   },
 ];
 
-	
-
-  const element = document.querySelector('.gallery');
-const img = images
-.map(({ url, alt }) => {
-  return `
-  <ul>
-    <li>${url}</li>
-    <li>${alt}</li>
-  </ul >
-    `
-})
-
-for (const el of images) {
+let img = [images.length = 3];
+for (let el of images) {
   document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}"></li>`);
-}
-   
-
-
-  
-
-
-
-
+};

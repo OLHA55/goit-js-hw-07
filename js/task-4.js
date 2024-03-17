@@ -1,20 +1,28 @@
+const form = document.querySelector(".login-form");
+form.addEventListener("submit", handleSubmit); // Changed "Login" to "submit" to listen for form submission event
+
 function submitForm() {
-    const email = document.getElementById('emailInput').value;
-    const password = document.getElementById('passwordInput').value;
+  const emailEl = document.getElementById('emailInput').value;
+  const passwordEl = document.getElementById('passwordInput').value;
 
-    // Here you can perform validation checks before submitting the form
-    if (email === '' || password === '') {
-      alert('Please fill in all fields');
-      return false;
-    }
-
-    // You can then make an AJAX request to validate the login credentials
-    // For demonstration purposes, I'll just log the values to the console
-    console.log('Email:', email);
-    console.log('Password:', password);
-
-    // Optionally, you can submit the form using JavaScript
-    document.getElementById('loginForm').submit();
+  if (emailEl === '' || passwordEl === '') {
+    alert('Please fill in all fields');
+    return false;
   }
-  
 
+  // There seems to be an incomplete operation here, maybe you intended to format a string?
+
+  return true; // Added a return statement at the end of the function
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const { email, password } = event.target.elements;
+  const info = {
+    email: email.value,
+    password: password.value
+  };
+
+  console.log(info);
+  event.target.reset(); // Corrected misspelling of 'reset' function
+}
