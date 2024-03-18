@@ -2,7 +2,6 @@
 
 form.addEventListener('submit', (element) => {
   element.preventDefault();
-
   const emailValue = form.email.value.trim();
   const passwordValue = form.password.value.trim();
 
@@ -10,7 +9,6 @@ form.addEventListener('submit', (element) => {
     alert('Please fill in all fields');
     return;
   }
-
   const formObject = {
     email: emailValue,
     password: passwordValue
