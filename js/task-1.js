@@ -1,5 +1,4 @@
- const item = document.querySelectorAll(".item")
-
+const item = document.querySelectorAll(".item");
  console.log(`Number of categories:${item.length} `);
 const ul = Array.from(document.querySelector('#categories').children);
 for (let item of ul) {
