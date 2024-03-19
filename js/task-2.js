@@ -28,7 +28,8 @@ const images = [
   },
 ];
 
-let img = [images.length = 3];
-for (let el of images) {
-  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${el.url}" alt="${el.alt}"></li>`);
+const arr = images.slice(0,3);
+for (let element of arr) {
+  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${element.url}" alt="${element.alt}"></li>`);
 };
+console.log(arr);
