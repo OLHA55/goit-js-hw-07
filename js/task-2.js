@@ -27,9 +27,9 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+const image = document.querySelector(".gallery");
+const itemElement = document.createElement("li");
 
-const arr = images.slice(0,3);
-for (let element of arr) {
-  document.querySelector(`.gallery`).insertAdjacentHTML(`beforeEnd`, `<li><img src="${element.url}" alt="${element.alt}"></li>`);
-};
-console.log(arr);
+
+console.log(itemElement);
+
