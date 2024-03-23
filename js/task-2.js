@@ -31,7 +31,6 @@ const images = [
 const image = document.querySelectorAll('images'); 	
 
 image.forEach(arr => {
- 
     const li = document.createElement('li'); 
     const newImg = document.createElement('images'); 
     newImg.url = "${images.url}"; 
@@ -41,7 +40,6 @@ image.forEach(arr => {
   }); 
  
 let newarr = []
-
 for (let key of Object.keys(images)) {
     const innerArr = []
     for (let value of Object.values(images[key])) {
@@ -49,7 +47,6 @@ for (let key of Object.keys(images)) {
     }
     newarr.push(innerArr)
 }
-
 console.log(newarr)
 const img = newarr.slice(0, 3); 
 const arr = [img]; 
