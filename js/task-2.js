@@ -28,31 +28,24 @@ const images = [
   },
 ];
   
-const image = document.querySelectorAll('images'); 	
-
-image.forEach(arr => {
-    const li = document.createElement('li'); 
-    const newImg = document.createElement('images'); 
-    newImg.url = "${images.url}"; 
-   newImg.alt = "${images.alt}"; 
+const img = document.querySelector('.gallery');
+images.forEach(Images => {
+    const newImg = document.createElement('img');
+    newImg.src = Images.url;
+  newImg.alt = images.alt;
+   
+    const li = document.createElement('li');
     li.appendChild(newImg); 
-    newImg.appendChild(li); 
-  }); 
- 
-let newarr = []
-for (let key of Object.keys(images)) {
-    const innerArr = []
-    for (let value of Object.values(images[key])) {
-        innerArr.push(value)
-    }
-    newarr.push(innerArr)
-}
-console.log(newarr)
-const img = newarr.slice(0, 3); 
-const arr = [img]; 
-console.log(arr);
+   img.appendChild(li);
+});
 
-const obj = arr.reduce((object, value, index) => {
-  return {...object, [index]: value};
+const sliceImages = images.slice(0, 3);
+const resulImages  = sliceImages;
+
+console.log(resulImages);
+
+const obj = sliceImages.reduce((object, value, index) => {
+    return {...object, [index]: value.url}
 }, {});
+
 console.log(obj);
