@@ -49,3 +49,27 @@ const obj = sliceImages.reduce((object, value, index) => {
 }, {});
 
 console.log(obj);
+
+
+
+
+
+// const img = document.querySelector('.gallery');
+// images.forEach(Image => {
+//      const newImg = document.createElement('img');
+//      newImg.src = Image.url;
+//      newImg.alt = Image.alt;   
+
+//      const li = document.createElement('li');
+//      li.appendChild(newImg);
+//      img.appendChild(li);
+// });
+
+// const sliceImages = images.slice(0, 3);
+
+// const obj = sliceImages.reduce((object, value, index) => {
+//      return { ...object, [index]: value.url };
+// }, {});
+
+// console.log(obj);
+
