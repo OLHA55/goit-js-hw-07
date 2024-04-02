@@ -34,8 +34,3 @@ const createGallery = images.map(({ url, alt }) => {
 }).join("");
 galleryContainerEl.insertAdjacentHTML("afterend", createGallery);
 
-const sliceImages = images.slice(0, 3);
-const image = sliceImages.reduce((images, value, index) => {
-  return { ...images, [index]: value.url };
-}, {});
-// console.log(image);
