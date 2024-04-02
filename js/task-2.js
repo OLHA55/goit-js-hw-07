@@ -28,48 +28,14 @@ const images = [
   },
 ];
   
-const img = document.querySelector('.gallery');
-images.forEach(Images => {
-    const newImg = document.createElement('img');
-    newImg.src = Images.url;
-  newImg.alt = images.alt;
-   
-    const li = document.createElement('li');
-    li.appendChild(newImg); 
-   img.appendChild(li);
-});
+ const galleryContainerEl = document.querySelector('.gallery');
+const createGallery = images.map(({ url, alt }) => {
+  return `<li><img src="${url}" alt="${alt}" width="360" height="300"></li>`;
+}).join("");
+galleryContainerEl.insertAdjacentHTML("afterend", createGallery);
 
 const sliceImages = images.slice(0, 3);
-const resulImages  = sliceImages;
-
-console.log(resulImages);
-
-const obj = sliceImages.reduce((object, value, index) => {
-    return {...object, [index]: value.url}
+const image = sliceImages.reduce((images, value, index) => {
+  return { ...images, [index]: value.url };
 }, {});
-
-console.log(obj);
-
-
-
-
-
-// const img = document.querySelector('.gallery');
-// images.forEach(Image => {
-//      const newImg = document.createElement('img');
-//      newImg.src = Image.url;
-//      newImg.alt = Image.alt;   
-
-//      const li = document.createElement('li');
-//      li.appendChild(newImg);
-//      img.appendChild(li);
-// });
-
-// const sliceImages = images.slice(0, 3);
-
-// const obj = sliceImages.reduce((object, value, index) => {
-//      return { ...object, [index]: value.url };
-// }, {});
-
-// console.log(obj);
-
+// console.log(image);
