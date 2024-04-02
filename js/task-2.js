@@ -28,9 +28,9 @@ const images = [
   },
 ];
   
- const galleryContainerEl = document.querySelector('.gallery');
+ const gallery = document.querySelector('.gallery');
 const createGallery = images.map(({ url, alt }) => {
-  return `<li><img src="${url}" alt="${alt}" width="360" height="300"></li>`;
+  return `<li><img src="${url}" alt="${alt}" ></li>`;
 }).join("");
-galleryContainerEl.insertAdjacentHTML("afterend", createGallery);
+gallery.insertAdjacentHTML("beforeend", createGallery);
 
